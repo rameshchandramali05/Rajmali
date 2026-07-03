@@ -1,41 +1,27 @@
-<style>
-.add{
-    margin-right:-5px;
-    padding:20px;
-}
-</style>
-
 <section>
 
-<div class="container py-3">
-
-    <div id="header">
-        <h2>Header Demo</h2>
-    </div>
-
-    <div id="welcom">
-        <h3>Welcome</h3>
-        <p>यह Home Page का Demo है।</p>
-    </div>
-
-    <div id="add" class="add">
-        <img src="https://picsum.photos/900/250" class="img-fluid rounded">
-    </div>
-
-    <div id="readmore">
-        <button class="btn btn-primary">Read More</button>
-    </div>
-
-    <div id="Func">
-        <h4>Functions</h4>
-        <p>यहाँ Function वाले कार्ड आएँगे।</p>
-    </div>
-
-    <div id="sadasy">
-        <h4>सदस्य</h4>
-        <p>सदस्यों की सूची यहाँ दिखाई जाएगी।</p>
-    </div>
-
-</div>
+<div id="header"></div>
+<div id="welcom"></div>
+<div id="add"></div>
+<div id="readmore"></div>
+<div id="Func"></div>
+<div id="sadasy"></div>
 
 </section>
+
+<script>
+function load(file, id){
+    fetch(file)
+      .then(res => res.text())
+      .then(html => {
+          document.getElementById(id).innerHTML = html;
+      });
+}
+
+load("header.html","header");
+load("welcom.html","welcom");
+load("add.html","add");
+load("readmore.html","readmore");
+load("Func.html","Func");
+load("sadasy.html","sadasy");
+</script>

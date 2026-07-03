@@ -1,15 +1,43 @@
 <section>
 
-  <div class="header mb-1">
-   <div id="header"></div>
-  </div>
-  
+<div class="header mb-1">
+    <div id="header"></div>
+</div>
 
-<div id="welcom"></div>
-<div id="add"></div>
-<div id="readmore"></div>
-<div id="Func"></div>
-<div id="sadasy"></div>
+<div class="mb-1">
+    <div id="welcom"></div>
+</div>
+
+<div class="add">
+    <div id="add"></div>
+</div>
+
+<div class="mb-1 p-0">
+    <div id="readmore"></div>
+</div>
+
+<div class="mb-2">
+    <div id="Func"></div>
+</div>
+
+<div class="mb-1">
+    <div id="sadasy"></div>
+</div>
+
+<script>
+async function loadPage(file, id) {
+    const res = await fetch(file);
+    const html = await res.text();
+    document.getElementById(id).innerHTML = html;
+}
+
+loadPage("header.html", "header");
+loadPage("welcom.html", "welcom");
+loadPage("add.html", "add");
+loadPage("readmore.html", "readmore");
+loadPage("Func.html", "Func");
+loadPage("sadasy.html", "sadasy");
+</script>
 
 </section>
 

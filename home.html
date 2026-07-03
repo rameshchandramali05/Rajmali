@@ -8,38 +8,6 @@ margin-right:-5px;
 
 
 <body>
-
-
-
-
-
-
-
-
-
-
-
-<script>
-function load(file, id) {
-    fetch(file)
-        .then(r => r.text())
-        .then(html => {
-            document.getElementById(id).innerHTML = html;
-        });
-}
-
-load("header.html", "header");
-load("welcom.html", "welcom");
-load("add.html", "add");
-load("readmore.html", "readmore");
-load("Func.html", "Func");
-load("sadasy.html", "sadasy");
-</script>
-
-
-
-  
-  
   <section>
   <div class="header mb-1">
      <div id="header"></div>
@@ -64,6 +32,35 @@ load("sadasy.html", "sadasy");
    <div id="sadasy"></div>
    </div>
   </section>
+
+
+
+
+
+  
+
+<script>
+function load(file, id) {
+    fetch(file)
+        .then(r => r.text())
+        .then(html => {
+            document.getElementById(id).innerHTML = html;
+        });
+}
+
+load("header.html", "header");
+load("welcom.html", "welcom");
+load("add.html", "add");
+load("readmore.html", "readmore");
+load("Func.html", "Func");
+load("sadasy.html", "sadasy");
+</script>
+
+
+
+  
+  
+
  
 </body>
 
